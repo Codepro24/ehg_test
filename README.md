@@ -1,3 +1,29 @@
+Code Test requirements
+
+A program which will produce an image in which each colour occurs exactly once -- with no repetition and no used colours. 
+1st step: Let's just produce an image in which each colour occurs exactly once, with no repetition.
+Colours are formed by combining a red, green, and blue component in the range 0..256;
+Your program will need to break each component into 32 steps -- 8, 16,24, .. 256 -- which means you will have 32,768 discrete colours. 
+2nd step: each component meaning red broken into 32 steps, blue into 32, and green into 32
+or red (0..255) -> 7, 15, 23...
+or r32*g32*b32
+
+Your image will therefore need to be sized to accommodate exactly this number of unique colours -- for example, 256x128px (although other dimensions are possible).
+3rd step: area of the rectangle (image) = number of pixels
+once area is found, find width and height
+
+The result should be aesthetically pleasing (or at least interesting), and should not use any existing graphics or other files. 
+
+Your submission will be evaluated in terms of good development practices followed, cleanliness of code, the elegance of the algorithm you use, and the originality of your approach.
+
+Algorithmic steps to solution
+App.js renders the image
+image has colors: red,green, blue
+image will have colors passed in unique combinations
+image can have state depending on color combinations... it will be re-rendered each time
+a different color combination is passed
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

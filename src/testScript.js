@@ -63,3 +63,10 @@ gradient.addColorStop(.7, 'white');
 gradient.addColorStop(1, 'pink');
 ctx.fillStyle = gradient;
 ctx.fillRect(10, 10, 200, 100);
+
+//r can go from 0 to 255 in steps of 8 
+r can have 32! values
+g can have 32! values
+b can have 32! values
+
+

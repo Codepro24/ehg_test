@@ -11,7 +11,7 @@ class App extends React.Component {
         let gindex = 255;
         let bindex = 255;
         for (let i=0; i < 3; i ++ ){
-            ctx.fillStyle = 'rgb(0,0,255)';
+            ctx.fillStyle = 'rgb(0,0,0)';
             ctx.fillRect(10,10,256,128);
         }
         
