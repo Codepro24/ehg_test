@@ -4,7 +4,7 @@ const data = imageData.data;
 
 const availableColors = initColors();
 
-for (let i = 0; i < data.length; i += 3) {
+for (let i = 0; i < data.length; i += 4) {
 
   let redIndex, blueIndex, greenIndex;
 
@@ -66,7 +66,6 @@ for (let i = 0; i < 256; i+=8) {
   console.log(redIndex, count);
 }
 
-let rShade, gShade, bShade;
 function initColors() {
   let count=0;
   const colors = new Array(32);
@@ -76,30 +75,26 @@ function initColors() {
       colors[r][g] = new Array(32);
       for (let b=0; b < 256; b+=8) {
         colors[r][g][b] = [r,g,b];
-        // rShade = r;
-        // gShade = g;
-        // bShade = b;
-        // ctx.fillStyle = 'rgb(rShade,gShade,bShade)';
-        // count++;
+        count++;
         console.log(colors[r][g][b], count);
       }
     }
   }
-  //console.log(colors);
   return colors;
 }
-initColors();
 
 const availableColors = initColors();
-//console.log(availableColors);
+console.log(availableColors);
 
 const ctx = this.refs.canvas.getContext('2d');
 let imgData = ctx.createImageData(256, 128);
-
+console.log(imgData.data.length);
 for (let i = 0; i < imgData.data.length; i += 4) {
-  imgData.data[i+0] = 255; //r value
-  imgData.data[i+1] = 0;  //g value
-  imgData.data[i+2] = 0;  //b value
+
+
+  imgData.data[i+0] = r; //r value
+  imgData.data[i+1] = g;  //g value
+  imgData.data[i+2] = b;  //b value
   imgData.data[i+3] = 255;  //opacity
 }
 //draw image data to the canvas
