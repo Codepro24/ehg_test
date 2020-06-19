@@ -80,21 +80,24 @@ for (let i = 0; i < 256; i+=8) {
   console.log(redIndex, count);
 }
 
+
 function initColors() {
+  let count=0;
   const colors = new Array(32);
-  for (let r=0; r < 256; r+8) {
+  for (let r=0; r < 256; r+=8) {
     colors[r] = new Array(32);
-    for (let g=0; g < 256; g+8) {
+    for (let g=0; g < 256; g+=8) {
       colors[r][g] = new Array(32);
-      for (let b=0; b < 256; b++) {
-        colors[r][g][b] = true;
-        console.log(colors[r][g][b]);
+      for (let b=0; b < 256; b+=8) {
+        colors[r][g][b] = [r,g,b];
+        count++;
+        console.log(colors[r][g][b], count);
       }
     }
   }
   //console.log(colors);
   return colors;
 }
-
+initColors();
 const availableColors = initColors();
 //console.log(availableColors);

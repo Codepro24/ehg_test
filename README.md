@@ -5,8 +5,13 @@ A program which will produce an image in which each colour occurs exactly once -
 Colours are formed by combining a red, green, and blue component in the range 0..256;
 Your program will need to break each component into 32 steps -- 8, 16,24, .. 256 -- which means you will have 32,768 discrete colours. 
 2nd step: each component meaning red broken into 32 steps, blue into 32, and green into 32
-or red (0..255) -> 7, 15, 23...
+or red (0..255) -> 
+(i=0; i<256;) -> 0, 7, 15, 23, 31, 39, 47, 55, 63, 71, 79, 87, 95, 103, 111, 119, 
+                            127,135, 143, 151, 159, 167, 175, 183, 191, 199, 207, 215, 223, 231,
+                            239, 247, 255 
+
 or r32*g32*b32
+can we use map, filter or reduce somewhere?
 
 Your image will therefore need to be sized to accommodate exactly this number of unique colours -- for example, 256x128px (although other dimensions are possible).
 3rd step: area of the rectangle (image) = number of pixels
