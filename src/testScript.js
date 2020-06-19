@@ -65,8 +65,36 @@ ctx.fillStyle = gradient;
 ctx.fillRect(10, 10, 200, 100);
 
 //r can go from 0 to 255 in steps of 8 
-r can have 32! values
-g can have 32! values
-b can have 32! values
+// r can have 32! values
+// g can have 32! values
+// b can have 32! values
 
+let redIndex, greenIndex, blueIndex, count = 0;
 
+for (let i = 0; i < 256; i+=8) {
+  redIndex = i;
+  count++; 
+  for (let j=0; j< 256; j+=8) {
+    greenIndex = j
+  }
+  console.log(redIndex, count);
+}
+
+function initColors() {
+  const colors = new Array(32);
+  for (let r=0; r < 256; r+8) {
+    colors[r] = new Array(32);
+    for (let g=0; g < 256; g+8) {
+      colors[r][g] = new Array(32);
+      for (let b=0; b < 256; b++) {
+        colors[r][g][b] = true;
+        console.log(colors[r][g][b]);
+      }
+    }
+  }
+  //console.log(colors);
+  return colors;
+}
+
+const availableColors = initColors();
+//console.log(availableColors);
