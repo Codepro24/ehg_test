@@ -8,6 +8,9 @@ class App extends React.Component {
     updateCanvas = () => {
         const ctx = this.refs.canvas.getContext('2d');
         let imgData = ctx.createImageData(256, 128);
+        // ctx.fillStyle = 'rgb(0,0,255)';
+        // ctx.fillRect(10,10,256,128);
+
         
         console.log(imgData.data.length);
         //var rShade, gShade, bShade;
