@@ -1,33 +1,10 @@
-Code Test requirements
+This project renders an image onto a Canvas and fills it with a combination of 32,768 colours with no repetitions. 
 
-A program which will produce an image in which each colour occurs exactly once -- with no repetition and no used colours. 
-1st step: Let's just produce an image in which each colour occurs exactly once, with no repetition.
-Colours are formed by combining a red, green, and blue component in the range 0..256;
-Your program will need to break each component into 32 steps -- 8, 16,24, .. 256 -- which means you will have 32,768 discrete colours. 
-2nd step: each component meaning red broken into 32 steps, blue into 32, and green into 32
-or red (0..255) -> 
-(i=0; i<256;) -> 0, 7, 15, 23, 31, 39, 47, 55, 63, 71, 79, 87, 95, 103, 111, 119, 
-                            127,135, 143, 151, 159, 167, 175, 183, 191, 199, 207, 215, 223, 231,
-                            239, 247, 255 
+Basic styling to the main container has been added through the semantic-ui.com cdn in index.html.
 
-or r32*g32*b32
-can we use map, filter or reduce somewhere?
+If you are cloning this repository, please install node_modules through the command line inside the project directory 
 
-Your image will therefore need to be sized to accommodate exactly this number of unique colours -- for example, 256x128px (although other dimensions are possible).
-3rd step: area of the rectangle (image) = number of pixels
-once area is found, find width and height
-
-The result should be aesthetically pleasing (or at least interesting), and should not use any existing graphics or other files. 
-
-Your submission will be evaluated in terms of good development practices followed, cleanliness of code, the elegance of the algorithm you use, and the originality of your approach.
-
-Algorithmic steps to solution
-App.js renders the image
-image has colors: red,green, blue
-image will have colors passed in unique combinations
-image can have state depending on color combinations... it will be re-rendered each time
-a different color combination is passed
-
+### npm install
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
