@@ -82,6 +82,7 @@ function initColors() {
   }
   return colors;
 }
+initColors();
 
 const availableColors = initColors();
 console.log(availableColors);
