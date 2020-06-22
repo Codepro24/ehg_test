@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 About
+=======
+>>>>>>> c47388fc5256222f44dbe30945049285d1073814
 This project renders an image onto a Canvas and fills it with a combination of 32,768 colours with no repetitions. 
 
 Basic styling to the main container has been added through the semantic-ui.com cdn in index.html.
