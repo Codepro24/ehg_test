@@ -19,7 +19,7 @@ class App extends React.Component {
         } else {
             this.gradientPixelData(data);
         }
-        ctx.putImageData(imgData, 0, 0);
+        ctx.putImageData(imgData, 22, 11);
     };
     
     initColors() {
@@ -77,9 +77,9 @@ class App extends React.Component {
     render() {
         return (
             <div id="mainDiv" className="ui raised container center aligned segment">
-                <h1 className="ui header">Fun with Colours!</h1>
-                <canvas ref="canvas" onClick={this.toggleRender}></canvas>
-                <p>Click the above image to change patterns</p>
+                    <h1 className="ui header">Fun with Colours!</h1>
+                    <canvas ref="canvas" onClick={this.toggleRender}></canvas>
+                    <p>Click the above image to change patterns</p>
             </div>
         );
     };
